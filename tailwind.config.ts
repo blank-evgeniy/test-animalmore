@@ -1,20 +1,24 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/widgets/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/shared/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/views/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/entities/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        "text-primary": "#344054",
-        "text-secondary": "#6E7279",
-        pink: "#D65AC9",
-        "pink-accent": "#DF7E97",
-        yellow: "#F5D424",
-        "gray-light": "#98A2B3",
+        'text-primary': '#344054',
+        'text-secondary': '#6E7279',
+        'text-dark': '#101828',
+        pink: '#D65AC9',
+        'pink-accent': '#DF7E97',
+        yellow: '#F5D424',
+        gray: '#98A2B3',
+        'gray-light': '#C8C8C8',
       },
     },
   },

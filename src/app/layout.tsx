@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Nunito } from 'next/font/google';
+import { Header } from '@/widgets/header';
+import './globals.css';
+import { Navbar } from '@/widgets/navbar';
+import { Footer } from '@/widgets/footer';
 
-const nunito = Nunito({ weight: ["400", "500", "600"], subsets: ["cyrillic"] });
+const nunito = Nunito({ weight: ['400', '500', '600'], subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
-  title: "Animalmore",
-  description: "Все о ваших питомцах",
+  title: 'Animalmore',
+  description: 'Все о ваших питомцах',
 };
 
 export default function RootLayout({
@@ -16,7 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunito.className}>{children}</body>
+      <body className={nunito.className}>
+        <div className="mx-auto max-w-[1280px]">
+          <Header />
+          <Navbar />
+          <div className="min-h-[calc(100vh-280px)]">{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
