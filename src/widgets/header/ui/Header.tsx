@@ -6,7 +6,6 @@ import SearchInput from '@/shared/ui/search-input/SearchInput';
 import MenuIcon from '@/shared/assets/icons/menu.svg';
 import HeartIcon from '@/shared/assets/icons/heart.svg';
 import CartIcon from '@/shared/assets/icons/cart.svg';
-import Link from 'next/link';
 import { Profile } from '@/entities/user';
 import { AppLink } from '@/shared/ui/link/Link';
 import MobileMenu from './MobileMenu';

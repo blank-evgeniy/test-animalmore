@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import { NavLink, NavLinks } from '../model/links';
-import { twMerge } from 'tailwind-merge';
-
 interface NavbarProps {
   links?: NavLink[];
   className?: string;
@@ -9,16 +7,16 @@ interface NavbarProps {
 
 export const Navbar = ({ links = NavLinks, className }: NavbarProps) => {
   return (
-    <nav className={twMerge('flex gap-6 overflow-x-auto', className)}>
-      {links.map((link) => (
-        <Link
-          className="whitespace-nowrap text-[22px]"
-          key={link.name}
-          href={link.href}
-        >
-          {link.name}
-        </Link>
-      ))}
+    <nav className={className}>
+      <ul className="flex gap-6 overflow-x-auto">
+        {links.map((link) => (
+          <li key={link.name}>
+            <Link className="whitespace-nowrap text-[22px]" href={link.href}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };

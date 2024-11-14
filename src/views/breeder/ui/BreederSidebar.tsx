@@ -15,24 +15,24 @@ const BreederSidebar = ({
   const commentsCount = 5;
 
   return (
-    <aside className={twMerge('md:w-[200px]', className)}>
-      <nav className="flex gap-2 overflow-x-auto md:flex-col">
-        {links.map((link) => (
+    <aside className={twMerge('mt-3 md:w-[200px]', className)}>
+      <nav>
+        <ul className="flex gap-2 overflow-x-auto md:flex-col">
+          {links.map((link) => (
+            <li key={link.name}>
+              <Link className="text-[22px] font-semibold" href={link.href}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
           <Link
-            className="text-[22px] font-semibold"
-            key={link.name}
-            href={link.href}
+            className="flex items-center gap-1 text-[22px] font-semibold"
+            href={'/'}
           >
-            {link.name}
+            Отзывы
+            <Badge>{commentsCount}</Badge>
           </Link>
-        ))}
-        <Link
-          className="flex items-center gap-1 text-[22px] font-semibold"
-          href={'/'}
-        >
-          Отзывы
-          <Badge>{commentsCount}</Badge>
-        </Link>
+        </ul>
       </nav>
     </aside>
   );

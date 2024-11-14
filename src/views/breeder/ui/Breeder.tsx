@@ -77,7 +77,7 @@ export const Breeder = () => {
             Заводчик свяжется с вами в удобное для вас время
           </p>
         </div>
-        <ImageSlider className="mb-[50px] hidden max-w-[430px] xl:flex" />
+        <ImageSlider className="mb-[50px] mt-2 hidden max-w-[430px] xl:flex" />
       </main>
     </div>
   );

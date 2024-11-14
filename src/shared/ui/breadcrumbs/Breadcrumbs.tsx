@@ -14,7 +14,7 @@ interface BreadcrumbsProps {
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className }) => {
   return (
     <nav className={className} aria-label="Breadcrumb">
-      <ol className="text-lg text-text-secondary">
+      <ol className="text-lg leading-[22.5px] text-text-secondary">
         {items.map((item, index) => (
           <li key={index} className="inline">
             {index > 0 && ' / '}
