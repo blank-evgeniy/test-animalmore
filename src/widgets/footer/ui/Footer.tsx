@@ -1,14 +1,13 @@
-import tgIcon from '@/shared/assets/icons/tg.svg';
-import vkIcon from '@/shared/assets/icons/vk.svg';
-import Image from 'next/image';
+import TGIcon from '@/shared/assets/icons/tg.svg';
+import VKIcon from '@/shared/assets/icons/vk.svg';
 import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="flex border-t border-gray-light pt-8">
+    <footer className="flex border-t border-gray-light pb-[60px] pt-8">
       <p className="max-w-[348px]">
         © 2020 – 2024 Сервис подбора питомцев ООО «Энималмор». Все права
-        защищены.{' '}
+        защищены.
       </p>
       <div className="ml-[98px] grid grid-cols-2 gap-x-40 gap-y-2">
         <Link className="" href={'/'}>
@@ -26,10 +25,10 @@ export const Footer = () => {
       </div>
       <div className="ml-auto flex gap-[10px]">
         <Link href="/" target="_blank">
-          <Image src={tgIcon} alt="наш телеграм" />
+          <TGIcon />
         </Link>
         <Link href="/" target="_blank">
-          <Image src={vkIcon} alt="наш вконтакте" />
+          <VKIcon />
         </Link>
       </div>
     </footer>
