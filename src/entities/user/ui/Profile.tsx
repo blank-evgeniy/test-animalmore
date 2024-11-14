@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import avatarImage from '@/shared/assets/mockImages/Avatar.jpg';
 import { twMerge } from 'tailwind-merge';
+import Link from 'next/link';
 
 interface ProfileProps {
   className?: string;
@@ -14,13 +15,13 @@ export const Profile = ({ className }: ProfileProps) => {
   };
 
   return (
-    <div className={twMerge('flex items-center gap-2', className)}>
+    <Link href={'/'} className={twMerge('flex items-center gap-2', className)}>
       <Image
         className="h-10 w-10 rounded-[13px] object-cover"
         src={user.image}
         alt={user.name}
       />
-      <p className="text-text-dark font-medium">{user.name}</p>
-    </div>
+      <p className="hidden font-medium text-text-dark xl:block">{user.name}</p>
+    </Link>
   );
 };

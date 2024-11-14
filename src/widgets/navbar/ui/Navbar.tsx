@@ -9,9 +9,13 @@ interface NavbarProps {
 
 export const Navbar = ({ links = NavLinks, className }: NavbarProps) => {
   return (
-    <nav className={twMerge('flex gap-6', className)}>
+    <nav className={twMerge('flex gap-6 overflow-x-auto', className)}>
       {links.map((link) => (
-        <Link className="text-[22px]" key={link.name} href={link.href}>
+        <Link
+          className="whitespace-nowrap text-[22px]"
+          key={link.name}
+          href={link.href}
+        >
           {link.name}
         </Link>
       ))}

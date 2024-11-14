@@ -4,12 +4,12 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="flex border-t border-gray-light pb-[60px] pt-8">
-      <p className="max-w-[348px]">
+    <footer className="flex flex-col border-t border-gray-light pb-[60px] pt-8 lg:flex-row">
+      <p className="text-center lg:max-w-[348px] lg:text-left">
         © 2020 – 2024 Сервис подбора питомцев ООО «Энималмор». Все права
         защищены.
       </p>
-      <div className="ml-[98px] grid grid-cols-2 gap-x-40 gap-y-2">
+      <div className="mt-6 grid grid-cols-2 gap-x-8 gap-y-2 px-10 lg:ml-[98px] lg:mt-0 lg:gap-x-40 lg:px-0">
         <Link className="" href={'/'}>
           О компании
         </Link>
@@ -23,7 +23,7 @@ export const Footer = () => {
           Сотрудничество
         </Link>
       </div>
-      <div className="ml-auto flex gap-[10px]">
+      <div className="mx-auto mt-6 flex gap-[10px] lg:mx-0 lg:ml-auto lg:mt-0">
         <Link href="/" target="_blank">
           <TGIcon />
         </Link>

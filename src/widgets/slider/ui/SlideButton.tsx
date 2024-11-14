@@ -13,7 +13,7 @@ const SlideButton = ({
   className,
 }: SlideButtonProps) => {
   let twStyle =
-    'flex h-8 w-8 items-center justify-center rounded-full bg-white';
+    'flex h-8 w-8 items-center justify-center rounded-full bg-white z-10';
 
   if (direction === 'right') {
     twStyle = twMerge(twStyle, 'rotate-180');

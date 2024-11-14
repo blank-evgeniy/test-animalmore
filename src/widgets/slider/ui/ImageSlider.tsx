@@ -43,7 +43,7 @@ export const ImageSlider = ({
   };
 
   return (
-    <div className={twMerge('flex flex-col items-center', className)}>
+    <div className={twMerge('mx-5 flex flex-col items-center', className)}>
       <div className="relative flex h-[430px] w-full max-w-[430px] items-center justify-center">
         <SlideButton
           onClick={prevImage}
@@ -58,7 +58,7 @@ export const ImageSlider = ({
           />
           <Image
             src={images[currentIndex]}
-            alt={'TODO:'}
+            alt={'...'}
             className="z-10 cursor-pointer rounded-lg object-cover"
             onClick={openModal}
           />
@@ -74,7 +74,7 @@ export const ImageSlider = ({
         {images.map((image, index) => (
           <Image
             key={index}
-            alt={'TODO:'}
+            alt={'...'}
             src={image}
             className={`h-20 w-20 cursor-pointer rounded-md object-cover ${currentIndex === index ? 'border-2 border-pink-accent' : ''}`}
             onClick={() => setCurrentIndex(index)}

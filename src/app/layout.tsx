@@ -20,10 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <div className="mx-auto max-w-[1280px]">
+        <div className="mx-auto max-w-[1280px] px-2">
           <Header />
           <Navbar />
-          <div className="min-h-[calc(100vh-280px)]">{children}</div>
+          {children}
           <Footer />
         </div>
       </body>

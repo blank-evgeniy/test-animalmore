@@ -1,0 +1,6 @@
+.search_input {
+  background:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(to right, rgba(214, 90, 201, 1), rgba(245, 212, 36, 1))
+      border-box;
+}
